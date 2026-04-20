@@ -1,0 +1,61 @@
+:root {
+  --bg-base: #0a0b0d;
+  --bg-raised: #111318;
+  --bg-sunken: #06070a;
+  --border-subtle: #1c1f26;
+  --border-strong: #2a2f3a;
+  --text-primary: #eceef2;
+  --text-secondary: #9aa0ac;
+  --text-tertiary: #5b606b;
+  --accent: #7c9bff;
+  --accent-fg: #0a0b0d;
+  --positive: #4ade80;
+  --negative: #f87171;
+  --warning: #fbbf24;
+  --conv-kernel: #7c9bff;
+  --conv-output: #4ade80;
+  --feature-map: rgba(124, 155, 255, 0.12);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

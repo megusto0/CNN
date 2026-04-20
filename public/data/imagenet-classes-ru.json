@@ -1,0 +1,13 @@
+[
+  { "id": 0, "en": "tench", "ru": "линь" },
+  { "id": 1, "en": "goldfish", "ru": "золотая рыбка" },
+  { "id": 2, "en": "great white shark", "ru": "белая акула" },
+  { "id": 3, "en": "tiger shark", "ru": "тигровая акула" },
+  { "id": 4, "en": "hammerhead", "ru": "акула-молот" },
+  { "id": 5, "en": "electric ray", "ru": "электрический скат" },
+  { "id": 6, "en": "stingray", "ru": "хвостокол" },
+  { "id": 7, "en": "cock", "ru": "петух" },
+  { "id": 8, "en": "hen", "ru": "курица" },
+  { "id": 9, "en": "ostrich", "ru": "страус" },
+  { "quality": "machine-assisted" }
+]
