@@ -1,13 +1,9 @@
 import { useLocation, Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import { load, KEYS } from "../../lib/storage";
-import type { Variant } from "../../types";
-
 const routeLabels: Record<string, string> = {
   "": "Обзор",
   theory: "Теория",
   assignment: "Задание",
-  variant: "Задание",
   playground: "Песочница",
   transfer: "Transfer learning",
   training: "Обучение",
@@ -18,8 +14,6 @@ const routeLabels: Record<string, string> = {
 export default function Topbar() {
   const location = useLocation();
   const segments = location.pathname.split("/").filter(Boolean);
-  const variant = load<Variant>(KEYS.variant);
-
   const breadcrumbs = segments.length === 0
     ? [{ label: "Обзор", path: "/" }]
     : [
@@ -64,19 +58,7 @@ export default function Topbar() {
         ))}
       </nav>
 
-      <div className="flex items-center gap-3">
-        {variant && (
-          <span
-            className="inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-mono font-medium"
-            style={{
-              backgroundColor: "var(--feature-map)",
-              color: "var(--accent)",
-            }}
-          >
-            Вариант {variant.number}
-          </span>
-        )}
-      </div>
+      <div />
     </header>
   );
 }

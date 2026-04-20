@@ -1,5 +1,5 @@
 import { InferenceSession, Tensor } from "onnxruntime-web";
-import { preprocessForResNet, softmax } from "./imagePreprocess";
+import { preprocessForResNet, preprocessForResNetNoNorm, softmax } from "./imagePreprocess";
 
 let classifierSession: InferenceSession | null = null;
 let lastconvSession: InferenceSession | null = null;
@@ -23,6 +23,25 @@ export async function infer(img: HTMLImageElement): Promise<{ classId: number; p
   if (!classifierSession) await loadModel();
 
   const input = preprocessForResNet(img);
+  const tensor = new Tensor("float32", input, [1, 3, 224, 224]);
+  const results = await classifierSession!.run({ input: tensor });
+  const logits = results.logits.data as Float32Array;
+  const probs = softmax(logits);
+  let bestIdx = 0;
+  let bestProb = 0;
+  for (let i = 0; i < probs.length; i++) {
+    if (probs[i] > bestProb) {
+      bestProb = probs[i];
+      bestIdx = i;
+    }
+  }
+  return { classId: bestIdx, probability: bestProb, logits };
+}
+
+export async function inferNoNorm(img: HTMLImageElement): Promise<{ classId: number; probability: number; logits: Float32Array }> {
+  if (!classifierSession) await loadModel();
+
+  const input = preprocessForResNetNoNorm(img);
   const tensor = new Tensor("float32", input, [1, 3, 224, 224]);
   const results = await classifierSession!.run({ input: tensor });
   const logits = results.logits.data as Float32Array;

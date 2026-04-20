@@ -71,22 +71,22 @@
     ]
   },
   {
-    "name": "ResNet-50",
+    "name": "ResNet-18",
     "input": [3, 224, 224],
-    "total_params_M": 25.6,
-    "flops_G": 4.1,
-    "top1_imagenet": 80.86,
+    "total_params_M": 11.7,
+    "flops_G": 1.8,
+    "top1_imagenet": 69.76,
     "layers": [
       { "type": "conv", "in": 3, "out": 64, "kernel": 7, "stride": 2, "pad": 3, "out_shape": [64, 112, 112], "params": 9408 },
       { "type": "bn", "out_shape": [64, 112, 112], "params": 128 },
       { "type": "relu", "out_shape": [64, 112, 112] },
       { "type": "maxpool", "kernel": 3, "stride": 2, "out_shape": [64, 56, 56] },
-      { "type": "block_group", "blocks": 3, "out": 256, "out_shape": [256, 56, 56], "params": 215808 },
-      { "type": "block_group", "blocks": 4, "out": 512, "out_shape": [512, 28, 28], "params": 1212928 },
-      { "type": "block_group", "blocks": 6, "out": 1024, "out_shape": [1024, 14, 14], "params": 7075328 },
-      { "type": "block_group", "blocks": 3, "out": 2048, "out_shape": [2048, 7, 7], "params": 14688256 },
-      { "type": "avgpool", "out_shape": [2048, 1, 1] },
-      { "type": "fc", "in": 2048, "out": 1000, "out_shape": [1000], "params": 2049000 }
+      { "type": "block_group", "blocks": 2, "out": 64, "out_shape": [64, 56, 56], "params": 147968 },
+      { "type": "block_group", "blocks": 2, "out": 128, "out_shape": [128, 28, 28], "params": 525568 },
+      { "type": "block_group", "blocks": 2, "out": 256, "out_shape": [256, 14, 14], "params": 2099712 },
+      { "type": "block_group", "blocks": 2, "out": 512, "out_shape": [512, 7, 7], "params": 8399360 },
+      { "type": "avgpool", "out_shape": [512, 1, 1] },
+      { "type": "fc", "in": 512, "out": 1000, "out_shape": [1000], "params": 513000 }
     ]
   }
 ]

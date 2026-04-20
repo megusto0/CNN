@@ -13,5 +13,7 @@
   { "model": "densenet121", "params_M": 8.0, "top1": 74.43, "top5": 91.97, "gflops": 2.9, "size_MB": 30.6, "year": 2017 },
   { "model": "densenet161", "params_M": 28.7, "top1": 77.65, "top5": 93.83, "gflops": 7.8, "size_MB": 109.6, "year": 2017 },
   { "model": "convnext_tiny", "params_M": 28.6, "top1": 82.52, "top5": 96.15, "gflops": 4.5, "size_MB": 109.3, "year": 2022 },
-  { "model": "convnext_base", "params_M": 88.6, "top1": 85.27, "top5": 97.49, "gflops": 15.4, "size_MB": 338.3, "year": 2022 }
+  { "model": "convnext_base", "params_M": 88.6, "top1": 85.27, "top5": 97.49, "gflops": 15.4, "size_MB": 338.3, "year": 2022 },
+  { "model": "resnet152", "params_M": 60.2, "top1": 82.28, "top5": 96.05, "gflops": 11.5, "size_MB": 230.0, "year": 2015 },
+  { "model": "vgg11_bn", "params_M": 132.9, "top1": 70.45, "top5": 90.09, "gflops": 7.6, "size_MB": 507.0, "year": 2014 }
 ]

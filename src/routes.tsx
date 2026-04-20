@@ -18,7 +18,6 @@ export const routes: RouteObject[] = [
       { path: "theory", element: <Theory /> },
       { path: "theory/:topic", element: <Theory /> },
       { path: "assignment", element: <Assignment /> },
-      { path: "variant", element: <Assignment /> },
       { path: "playground", element: <Playground /> },
       { path: "transfer", element: <Transfer /> },
       { path: "training", element: <Training /> },

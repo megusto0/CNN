@@ -4,4 +4,4 @@ export const springs = {
   gentle: { type: "spring" as const, stiffness: 160, damping: 24, mass: 1.2 },
 };
 
-export const durations = { fast: 0.15, base: 0.25, slow: 0.4 };
+export const tweens = { fast: 0.15, base: 0.25, slow: 0.4 };

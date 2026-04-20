@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { springs } from "../../design/motion";
-import { infer, computeCAM, isWasmAvailable } from "../../lib/onnx";
+import { infer, inferNoNorm, computeCAM, isWasmAvailable } from "../../lib/onnx";
 import { renderCAMOverlay } from "../../lib/cam";
 import type { ImageNetClass } from "../../types";
 
@@ -34,6 +34,7 @@ export default function TransferDemo() {
   const [classNames, setClassNames] = useState<ImageNetClass[]>([]);
   const [showCAM, setShowCAM] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [disableNorm, setDisableNorm] = useState(false);
 
   const imgRef = useRef<HTMLImageElement>(null);
   const camCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -59,7 +60,7 @@ export default function TransferDemo() {
         await new Promise((r) => setTimeout(r, 100));
       }
 
-      const result = await infer(imgRef.current);
+      const result = await (disableNorm ? inferNoNorm(imgRef.current) : infer(imgRef.current));
       setPreprocessStep(-1);
 
       const probs = new Float32Array(1000);
@@ -85,7 +86,7 @@ export default function TransferDemo() {
     } finally {
       setLoading(false);
     }
-  }, [imageUrl, classNames]);
+  }, [imageUrl, classNames, disableNorm]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -263,6 +264,12 @@ export default function TransferDemo() {
               )}
             </AnimatePresence>
 
+            {disableNorm && top5.length > 0 && (
+              <p className="text-xs" style={{ color: "var(--warning)", maxWidth: "65ch" }}>
+                Без нормализации сеть ломается: статистика входа не совпадает с той, на которой она обучалась.
+              </p>
+            )}
+
             {error && (
               <p className="text-xs" style={{ color: "var(--negative)" }}>
                 {error}
@@ -278,6 +285,15 @@ export default function TransferDemo() {
               >
                 {loading ? "Обработка..." : "Классифицировать"}
               </button>
+              <label className="flex items-center gap-1.5 text-xs" style={{ color: "var(--text-secondary)" }}>
+                <input
+                  type="checkbox"
+                  checked={disableNorm}
+                  onChange={(e) => setDisableNorm(e.target.checked)}
+                  className="accent-[var(--accent)]"
+                />
+                Отключить Normalize
+              </label>
               {top5.length > 0 && (
                 <button
                   onClick={handleCAM}
