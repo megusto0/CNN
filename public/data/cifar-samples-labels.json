@@ -2,501 +2,801 @@
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_00.png"
+    "filename": "cifar10-test-00003-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 3,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_01.png"
+    "filename": "cifar10-test-00010-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 10,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_02.png"
+    "filename": "cifar10-test-00021-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 21,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_03.png"
+    "filename": "cifar10-test-00027-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 27,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_04.png"
+    "filename": "cifar10-test-00044-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 44,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_05.png"
+    "filename": "cifar10-test-00052-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 52,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_06.png"
+    "filename": "cifar10-test-00074-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 74,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_07.png"
+    "filename": "cifar10-test-00090-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 90,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_08.png"
+    "filename": "cifar10-test-00097-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 97,
+    "split": "test"
   },
   {
     "label": 0,
     "className": "airplane",
-    "filename": "airplane_09.png"
+    "filename": "cifar10-test-00098-airplane.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 98,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_00.png"
+    "filename": "cifar10-test-00006-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 6,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_01.png"
+    "filename": "cifar10-test-00009-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 9,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_02.png"
+    "filename": "cifar10-test-00037-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 37,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_03.png"
+    "filename": "cifar10-test-00066-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 66,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_04.png"
+    "filename": "cifar10-test-00081-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 81,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_05.png"
+    "filename": "cifar10-test-00082-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 82,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_06.png"
+    "filename": "cifar10-test-00104-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 104,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_07.png"
+    "filename": "cifar10-test-00105-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 105,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_08.png"
+    "filename": "cifar10-test-00114-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 114,
+    "split": "test"
   },
   {
     "label": 1,
     "className": "automobile",
-    "filename": "automobile_09.png"
+    "filename": "cifar10-test-00122-automobile.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 122,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_00.png"
+    "filename": "cifar10-test-00025-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 25,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_01.png"
+    "filename": "cifar10-test-00035-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 35,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_02.png"
+    "filename": "cifar10-test-00065-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 65,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_03.png"
+    "filename": "cifar10-test-00067-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 67,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_04.png"
+    "filename": "cifar10-test-00070-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 70,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_05.png"
+    "filename": "cifar10-test-00075-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 75,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_06.png"
+    "filename": "cifar10-test-00084-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 84,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_07.png"
+    "filename": "cifar10-test-00086-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 86,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_08.png"
+    "filename": "cifar10-test-00113-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 113,
+    "split": "test"
   },
   {
     "label": 2,
     "className": "bird",
-    "filename": "bird_09.png"
+    "filename": "cifar10-test-00118-bird.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 118,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_00.png"
+    "filename": "cifar10-test-00000-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 0,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_01.png"
+    "filename": "cifar10-test-00008-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 8,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_02.png"
+    "filename": "cifar10-test-00046-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 46,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_03.png"
+    "filename": "cifar10-test-00053-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 53,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_04.png"
+    "filename": "cifar10-test-00061-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 61,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_05.png"
+    "filename": "cifar10-test-00063-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 63,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_06.png"
+    "filename": "cifar10-test-00068-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 68,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_07.png"
+    "filename": "cifar10-test-00077-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 77,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_08.png"
+    "filename": "cifar10-test-00078-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 78,
+    "split": "test"
   },
   {
     "label": 3,
     "className": "cat",
-    "filename": "cat_09.png"
+    "filename": "cifar10-test-00091-cat.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 91,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_00.png"
+    "filename": "cifar10-test-00022-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 22,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_01.png"
+    "filename": "cifar10-test-00026-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 26,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_02.png"
+    "filename": "cifar10-test-00032-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 32,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_03.png"
+    "filename": "cifar10-test-00036-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 36,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_04.png"
+    "filename": "cifar10-test-00040-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 40,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_05.png"
+    "filename": "cifar10-test-00058-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 58,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_06.png"
+    "filename": "cifar10-test-00094-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 94,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_07.png"
+    "filename": "cifar10-test-00100-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 100,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_08.png"
+    "filename": "cifar10-test-00110-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 110,
+    "split": "test"
   },
   {
     "label": 4,
     "className": "deer",
-    "filename": "deer_09.png"
+    "filename": "cifar10-test-00117-deer.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 117,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_00.png"
+    "filename": "cifar10-test-00012-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 12,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_01.png"
+    "filename": "cifar10-test-00016-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 16,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_02.png"
+    "filename": "cifar10-test-00024-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 24,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_03.png"
+    "filename": "cifar10-test-00031-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 31,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_04.png"
+    "filename": "cifar10-test-00033-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 33,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_05.png"
+    "filename": "cifar10-test-00039-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 39,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_06.png"
+    "filename": "cifar10-test-00042-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 42,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_07.png"
+    "filename": "cifar10-test-00085-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 85,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_08.png"
+    "filename": "cifar10-test-00101-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 101,
+    "split": "test"
   },
   {
     "label": 5,
     "className": "dog",
-    "filename": "dog_09.png"
+    "filename": "cifar10-test-00128-dog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 128,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_00.png"
+    "filename": "cifar10-test-00004-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 4,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_01.png"
+    "filename": "cifar10-test-00005-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 5,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_02.png"
+    "filename": "cifar10-test-00007-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 7,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_03.png"
+    "filename": "cifar10-test-00019-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 19,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_04.png"
+    "filename": "cifar10-test-00029-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 29,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_05.png"
+    "filename": "cifar10-test-00030-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 30,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_06.png"
+    "filename": "cifar10-test-00041-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 41,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_07.png"
+    "filename": "cifar10-test-00043-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 43,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_08.png"
+    "filename": "cifar10-test-00049-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 49,
+    "split": "test"
   },
   {
     "label": 6,
     "className": "frog",
-    "filename": "frog_09.png"
+    "filename": "cifar10-test-00059-frog.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 59,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_00.png"
+    "filename": "cifar10-test-00013-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 13,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_01.png"
+    "filename": "cifar10-test-00017-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 17,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_02.png"
+    "filename": "cifar10-test-00020-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 20,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_03.png"
+    "filename": "cifar10-test-00048-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 48,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_04.png"
+    "filename": "cifar10-test-00056-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 56,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_05.png"
+    "filename": "cifar10-test-00057-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 57,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_06.png"
+    "filename": "cifar10-test-00060-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 60,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_07.png"
+    "filename": "cifar10-test-00069-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 69,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_08.png"
+    "filename": "cifar10-test-00083-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 83,
+    "split": "test"
   },
   {
     "label": 7,
     "className": "horse",
-    "filename": "horse_09.png"
+    "filename": "cifar10-test-00087-horse.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 87,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_00.png"
+    "filename": "cifar10-test-00001-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 1,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_01.png"
+    "filename": "cifar10-test-00002-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 2,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_02.png"
+    "filename": "cifar10-test-00015-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 15,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_03.png"
+    "filename": "cifar10-test-00018-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 18,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_04.png"
+    "filename": "cifar10-test-00051-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 51,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_05.png"
+    "filename": "cifar10-test-00054-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 54,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_06.png"
+    "filename": "cifar10-test-00055-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 55,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_07.png"
+    "filename": "cifar10-test-00072-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 72,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_08.png"
+    "filename": "cifar10-test-00073-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 73,
+    "split": "test"
   },
   {
     "label": 8,
     "className": "ship",
-    "filename": "ship_09.png"
+    "filename": "cifar10-test-00079-ship.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 79,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_00.png"
+    "filename": "cifar10-test-00011-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 11,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_01.png"
+    "filename": "cifar10-test-00014-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 14,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_02.png"
+    "filename": "cifar10-test-00023-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 23,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_03.png"
+    "filename": "cifar10-test-00028-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 28,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_04.png"
+    "filename": "cifar10-test-00034-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 34,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_05.png"
+    "filename": "cifar10-test-00038-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 38,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_06.png"
+    "filename": "cifar10-test-00045-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 45,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_07.png"
+    "filename": "cifar10-test-00047-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 47,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_08.png"
+    "filename": "cifar10-test-00050-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 50,
+    "split": "test"
   },
   {
     "label": 9,
     "className": "truck",
-    "filename": "truck_09.png"
+    "filename": "cifar10-test-00076-truck.png",
+    "source": "torchvision.datasets.CIFAR10",
+    "sourceIndex": 76,
+    "split": "test"
   }
 ]
