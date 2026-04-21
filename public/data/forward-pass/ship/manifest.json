@@ -1,4 +1,10 @@
 {
+  "source": "scratch-cnn checkpoint + torchvision.datasets.CIFAR10",
+  "source_index": 1,
+  "input_image": "input.png",
+  "true": "ship",
+  "predicted": "ship",
+  "probability": 0.9991744160652161,
   "layers": [
     {
       "name": "Input",
@@ -20,7 +26,8 @@
       ],
       "file": "layer_01.bin",
       "dtype": "float32",
-      "params": 896
+      "params": 896,
+      "module": "features.0"
     },
     {
       "name": "ReLU1",
@@ -31,7 +38,8 @@
       ],
       "file": "layer_02.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "features.1"
     },
     {
       "name": "MaxPool1",
@@ -42,7 +50,8 @@
       ],
       "file": "layer_03.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "features.2"
     },
     {
       "name": "Conv2",
@@ -53,7 +62,8 @@
       ],
       "file": "layer_04.bin",
       "dtype": "float32",
-      "params": 18496
+      "params": 18496,
+      "module": "features.3"
     },
     {
       "name": "ReLU2",
@@ -64,7 +74,8 @@
       ],
       "file": "layer_05.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "features.4"
     },
     {
       "name": "MaxPool2",
@@ -75,7 +86,8 @@
       ],
       "file": "layer_06.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "features.5"
     },
     {
       "name": "Conv3",
@@ -86,7 +98,8 @@
       ],
       "file": "layer_07.bin",
       "dtype": "float32",
-      "params": 73856
+      "params": 73856,
+      "module": "features.6"
     },
     {
       "name": "ReLU3",
@@ -97,7 +110,8 @@
       ],
       "file": "layer_08.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "features.7"
     },
     {
       "name": "MaxPool3",
@@ -108,7 +122,8 @@
       ],
       "file": "layer_09.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "features.8"
     },
     {
       "name": "Flatten",
@@ -117,21 +132,70 @@
       ],
       "file": "layer_10.bin",
       "dtype": "float32",
-      "params": 0
+      "params": 0,
+      "module": "classifier.0"
+    },
+    {
+      "name": "fc1",
+      "shape": [
+        256
+      ],
+      "file": "layer_11.bin",
+      "dtype": "float32",
+      "params": 524544,
+      "module": "classifier.1"
+    },
+    {
+      "name": "ReLU4",
+      "shape": [
+        256
+      ],
+      "file": "layer_12.bin",
+      "dtype": "float32",
+      "params": 0,
+      "module": "classifier.2"
+    },
+    {
+      "name": "Dropout",
+      "shape": [
+        256
+      ],
+      "file": "layer_13.bin",
+      "dtype": "float32",
+      "params": 0,
+      "module": "classifier.3"
+    },
+    {
+      "name": "fc2",
+      "shape": [
+        10
+      ],
+      "file": "layer_14.bin",
+      "dtype": "float32",
+      "params": 2570,
+      "module": "classifier.4"
     }
   ],
-  "filters": {},
+  "filters": {
+    "Conv1": "filters_conv1.bin",
+    "Conv2": "filters_conv2.bin",
+    "Conv3": "filters_conv3.bin"
+  },
   "commentary": {
-    "Input": "Input показывает, как меняется представление объекта ship.",
-    "Conv1": "Conv1 показывает, как меняется представление объекта ship.",
-    "ReLU1": "ReLU1 показывает, как меняется представление объекта ship.",
-    "MaxPool1": "MaxPool1 показывает, как меняется представление объекта ship.",
-    "Conv2": "Conv2 показывает, как меняется представление объекта ship.",
-    "ReLU2": "ReLU2 показывает, как меняется представление объекта ship.",
-    "MaxPool2": "MaxPool2 показывает, как меняется представление объекта ship.",
-    "Conv3": "Conv3 показывает, как меняется представление объекта ship.",
-    "ReLU3": "ReLU3 показывает, как меняется представление объекта ship.",
-    "MaxPool3": "MaxPool3 показывает, как меняется представление объекта ship.",
-    "Flatten": "Flatten показывает, как меняется представление объекта ship."
+    "Input": "Это исходный нормализованный тензор CIFAR-10 для класса ship.",
+    "Conv1": "Свёртка увеличивает число каналов: разные фильтры отвечают на разные локальные структуры.",
+    "ReLU1": "ReLU зануляет отрицательные ответы и оставляет только положительные активации.",
+    "MaxPool1": "MaxPool уменьшает пространственную сетку и сохраняет сильнейшие локальные ответы.",
+    "Conv2": "Свёртка увеличивает число каналов: разные фильтры отвечают на разные локальные структуры.",
+    "ReLU2": "ReLU зануляет отрицательные ответы и оставляет только положительные активации.",
+    "MaxPool2": "MaxPool уменьшает пространственную сетку и сохраняет сильнейшие локальные ответы.",
+    "Conv3": "Свёртка увеличивает число каналов: разные фильтры отвечают на разные локальные структуры.",
+    "ReLU3": "ReLU зануляет отрицательные ответы и оставляет только положительные активации.",
+    "MaxPool3": "MaxPool уменьшает пространственную сетку и сохраняет сильнейшие локальные ответы.",
+    "Flatten": "Flatten разворачивает последние карты признаков в один вектор для классификатора.",
+    "fc1": "Полносвязный слой превращает признаки в компактное решение о классе.",
+    "ReLU4": "ReLU зануляет отрицательные ответы и оставляет только положительные активации.",
+    "Dropout": "Этот слой сохраняет форму представления и готовит его к следующей операции.",
+    "fc2": "Полносвязный слой превращает признаки в компактное решение о классе."
   }
 }
