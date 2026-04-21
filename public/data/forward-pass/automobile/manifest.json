@@ -4,7 +4,7 @@
   "input_image": "input.png",
   "true": "automobile",
   "predicted": "automobile",
-  "probability": 0.5865370035171509,
+  "probability": 0.9731623530387878,
   "layers": [
     {
       "name": "Input",

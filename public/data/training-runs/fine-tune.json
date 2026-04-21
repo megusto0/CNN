@@ -3,7 +3,7 @@
   "display_name": "ResNet-18 fine-tune",
   "source": "/home/megusto/zlm/labwork/artifacts/results.json",
   "real_metrics": true,
-  "misclassification_images": "metadata only",
+  "misclassification_images": "exported Colab images",
   "epochs": 10,
   "batch_size": 64,
   "optimizer": "Adam",
@@ -12,400 +12,413 @@
     "fc": 0.001
   },
   "trainable_params": 8398858,
-  "time_min": null,
+  "time_min": 15.671646543343861,
   "train_loss": [
-    0.4346569367090861,
-    0.20708663662804497,
-    0.130496800465054,
-    0.08918113859138554,
-    0.0635530158923732,
-    0.052713991510371365,
-    0.04188584760924181,
-    0.04235790146414721,
-    0.03325718919686559,
-    0.03067018419276509
+    0.43465831927723353,
+    0.20677842928038703,
+    0.13091818364063898,
+    0.08862430490106345,
+    0.06419238271183438,
+    0.05061041583228442,
+    0.04299270771013366,
+    0.040371102022097656,
+    0.03219119179468188,
+    0.028657051789843374
   ],
   "train_acc": [
-    0.8513777777777778,
-    0.9294222222222223,
+    0.8514,
+    0.9293333333333333,
     0.9549777777777778,
-    0.9701555555555555,
-    0.9791555555555556,
-    0.9821111111111112,
-    0.9860666666666666,
-    0.9858666666666667,
-    0.9882888888888889,
-    0.9895777777777778
+    0.9703333333333334,
+    0.9781777777777778,
+    0.9831777777777778,
+    0.9854,
+    0.9857555555555556,
+    0.9885777777777778,
+    0.9903777777777778
   ],
   "val_loss": [
-    0.2950373244643211,
-    0.2775413208961487,
-    0.28041055698990824,
-    0.3209381817817688,
-    0.32322204937934873,
-    0.3263736745715141,
-    0.3759218943208456,
-    0.3624829135119915,
-    0.3825902190446854,
-    0.403392468264699
+    0.2957439091444016,
+    0.276758092880249,
+    0.2783379031866789,
+    0.32423537699878213,
+    0.3383681333601475,
+    0.3092575688220561,
+    0.37688104856014254,
+    0.33667625632286075,
+    0.34703735206723213,
+    0.3838702727198601
   ],
   "val_acc": [
     0.8956,
-    0.906,
-    0.9116,
-    0.9066,
-    0.9112,
-    0.9146,
-    0.9142,
-    0.9134,
-    0.9152,
-    0.9106
+    0.9072,
+    0.9102,
+    0.9052,
+    0.9084,
+    0.9172,
+    0.9122,
+    0.9168,
+    0.9204,
+    0.9118
   ],
-  "test_acc": 0.909,
+  "epoch_seconds": [
+    93.26133394241333,
+    94.6551628112793,
+    94.23306608200073,
+    93.87248802185059,
+    95.5222954750061,
+    93.33475255966187,
+    94.5511405467987,
+    92.87481141090393,
+    93.54435706138611,
+    94.44807434082031
+  ],
+  "eval_time_sec": 18.421935558319092,
+  "test_acc": 0.9062,
   "confusion": [
     [
-      943,
-      5,
-      7,
-      4,
-      2,
-      5,
-      6,
-      1,
-      23,
-      4
-    ],
-    [
-      5,
-      971,
-      1,
-      2,
+      959,
       0,
+      9,
       1,
-      0,
-      1,
-      5,
-      14
-    ],
-    [
-      18,
-      0,
-      881,
-      23,
-      8,
-      37,
-      17,
-      13,
-      2,
-      1
-    ],
-    [
-      6,
-      0,
-      12,
-      781,
-      13,
-      140,
-      27,
-      16,
-      5,
-      0
-    ],
-    [
       3,
       1,
-      25,
-      13,
-      886,
-      28,
-      17,
-      27,
-      0,
-      0
-    ],
-    [
-      1,
-      0,
-      3,
-      56,
-      13,
-      905,
-      7,
-      14,
-      1,
-      0
-    ],
-    [
-      2,
-      0,
-      11,
-      11,
-      5,
-      8,
-      960,
-      2,
-      0,
-      1
-    ],
-    [
-      4,
-      0,
       6,
+      7,
       12,
+      2
+    ],
+    [
+      13,
+      953,
+      1,
+      2,
+      1,
+      1,
+      3,
+      3,
+      7,
+      16
+    ],
+    [
+      19,
+      0,
+      880,
       15,
-      27,
+      23,
+      24,
+      16,
+      21,
       1,
-      934,
+      1
+    ],
+    [
+      8,
+      1,
+      23,
+      732,
+      15,
+      133,
+      38,
+      34,
+      10,
+      6
+    ],
+    [
+      4,
+      0,
+      20,
+      9,
+      893,
+      33,
+      11,
+      30,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      5,
+      46,
+      13,
+      900,
+      10,
+      20,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      15,
+      13,
+      4,
+      11,
+      949,
+      6,
       0,
       1
     ],
     [
-      36,
       9,
-      4,
-      2,
       0,
-      0,
-      1,
       5,
-      929,
-      14
+      3,
+      7,
+      31,
+      0,
+      945,
+      0,
+      0
     ],
     [
-      9,
-      78,
+      41,
+      4,
+      7,
+      2,
       1,
-      6,
       0,
       1,
+      3,
+      933,
+      8
+    ],
+    [
+      11,
+      57,
       2,
+      2,
+      0,
       2,
       1,
-      900
+      2,
+      5,
+      918
     ]
   ],
   "per_class_acc": {
-    "airplane": 0.9430000185966492,
-    "automobile": 0.9710000157356262,
-    "bird": 0.8809999823570251,
-    "cat": 0.781000018119812,
-    "deer": 0.8859999775886536,
-    "dog": 0.9049999713897705,
-    "frog": 0.9599999785423279,
-    "horse": 0.9340000152587891,
-    "ship": 0.9290000200271606,
-    "truck": 0.8999999761581421
+    "airplane": 0.9589999914169312,
+    "automobile": 0.953000009059906,
+    "bird": 0.8799999952316284,
+    "cat": 0.7319999933242798,
+    "deer": 0.8930000066757202,
+    "dog": 0.8999999761581421,
+    "frog": 0.9490000009536743,
+    "horse": 0.9449999928474426,
+    "ship": 0.9330000281333923,
+    "truck": 0.9179999828338623
   },
   "misclassifications": [
     {
-      "true": "horse",
-      "pred": "cat",
-      "confidence": 0.763621985912323,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "bird",
-      "pred": "dog",
-      "confidence": 0.5833648443222046,
-      "image_path": null,
-      "image_available": false
-    },
-    {
       "true": "automobile",
       "pred": "truck",
-      "confidence": 0.993095338344574,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9962499737739563,
+      "image_path": "miss_000.png",
+      "image_available": true
     },
     {
       "true": "truck",
-      "pred": "automobile",
-      "confidence": 0.9160463213920593,
-      "image_path": null,
-      "image_available": false
+      "pred": "ship",
+      "confidence": 0.9974299073219299,
+      "image_path": "miss_001.png",
+      "image_available": true
     },
     {
-      "true": "horse",
-      "pred": "cat",
-      "confidence": 0.9970055222511292,
-      "image_path": null,
-      "image_available": false
+      "true": "cat",
+      "pred": "dog",
+      "confidence": 0.9881442189216614,
+      "image_path": "miss_002.png",
+      "image_available": true
     },
     {
       "true": "deer",
       "pred": "dog",
-      "confidence": 0.9999417066574097,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9999969005584717,
+      "image_path": "miss_003.png",
+      "image_available": true
+    },
+    {
+      "true": "cat",
+      "pred": "dog",
+      "confidence": 0.9045423269271851,
+      "image_path": "miss_004.png",
+      "image_available": true
+    },
+    {
+      "true": "cat",
+      "pred": "dog",
+      "confidence": 0.9966654181480408,
+      "image_path": "miss_005.png",
+      "image_available": true
+    },
+    {
+      "true": "horse",
+      "pred": "deer",
+      "confidence": 0.7724751234054565,
+      "image_path": "miss_006.png",
+      "image_available": true
+    },
+    {
+      "true": "cat",
+      "pred": "dog",
+      "confidence": 0.8311713933944702,
+      "image_path": "miss_007.png",
+      "image_available": true
+    },
+    {
+      "true": "cat",
+      "pred": "dog",
+      "confidence": 0.935534656047821,
+      "image_path": "miss_008.png",
+      "image_available": true
+    },
+    {
+      "true": "bird",
+      "pred": "dog",
+      "confidence": 0.9350298047065735,
+      "image_path": "miss_009.png",
+      "image_available": true
     },
     {
       "true": "frog",
       "pred": "cat",
-      "confidence": 0.6041496396064758,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "cat",
-      "pred": "dog",
-      "confidence": 0.9877432584762573,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "cat",
-      "pred": "dog",
-      "confidence": 0.9850561618804932,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "cat",
-      "pred": "dog",
-      "confidence": 0.9856793284416199,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "bird",
-      "pred": "dog",
-      "confidence": 0.9988598823547363,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "bird",
-      "pred": "horse",
-      "confidence": 0.8436712622642517,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9930003881454468,
+      "image_path": "miss_010.png",
+      "image_available": true
     },
     {
       "true": "ship",
       "pred": "airplane",
-      "confidence": 0.9996626377105713,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9999918937683105,
+      "image_path": "miss_011.png",
+      "image_available": true
     },
     {
-      "true": "truck",
-      "pred": "cat",
-      "confidence": 0.9693911671638489,
-      "image_path": null,
-      "image_available": false
+      "true": "bird",
+      "pred": "frog",
+      "confidence": 0.7307499647140503,
+      "image_path": "miss_012.png",
+      "image_available": true
     },
     {
       "true": "deer",
       "pred": "cat",
-      "confidence": 0.9997814297676086,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9795411229133606,
+      "image_path": "miss_013.png",
+      "image_available": true
+    },
+    {
+      "true": "deer",
+      "pred": "dog",
+      "confidence": 0.8271321654319763,
+      "image_path": "miss_014.png",
+      "image_available": true
+    },
+    {
+      "true": "cat",
+      "pred": "horse",
+      "confidence": 0.7068657279014587,
+      "image_path": "miss_015.png",
+      "image_available": true
     },
     {
       "true": "frog",
       "pred": "truck",
-      "confidence": 0.7529870271682739,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.7900354862213135,
+      "image_path": "miss_016.png",
+      "image_available": true
     },
     {
       "true": "horse",
       "pred": "dog",
-      "confidence": 0.7148969173431396,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9826908707618713,
+      "image_path": "miss_017.png",
+      "image_available": true
+    },
+    {
+      "true": "dog",
+      "pred": "cat",
+      "confidence": 0.3752722442150116,
+      "image_path": "miss_018.png",
+      "image_available": true
     },
     {
       "true": "airplane",
       "pred": "ship",
-      "confidence": 0.9073938131332397,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "airplane",
-      "pred": "ship",
-      "confidence": 0.9978582262992859,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9413763284683228,
+      "image_path": "miss_019.png",
+      "image_available": true
     },
     {
       "true": "ship",
       "pred": "bird",
-      "confidence": 0.9645128846168518,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.48307645320892334,
+      "image_path": "miss_020.png",
+      "image_available": true
     },
     {
       "true": "cat",
       "pred": "dog",
-      "confidence": 0.9448336362838745,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.8332961201667786,
+      "image_path": "miss_021.png",
+      "image_available": true
     },
     {
       "true": "dog",
       "pred": "frog",
-      "confidence": 0.9442028999328613,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.5423755645751953,
+      "image_path": "miss_022.png",
+      "image_available": true
     },
     {
       "true": "cat",
-      "pred": "dog",
-      "confidence": 0.8439509272575378,
-      "image_path": null,
-      "image_available": false
+      "pred": "bird",
+      "confidence": 0.5088842511177063,
+      "image_path": "miss_023.png",
+      "image_available": true
     },
     {
       "true": "truck",
       "pred": "automobile",
       "confidence": 1.0,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_024.png",
+      "image_available": true
     },
     {
       "true": "frog",
       "pred": "deer",
-      "confidence": 0.9993674159049988,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9999986886978149,
+      "image_path": "miss_025.png",
+      "image_available": true
     },
     {
       "true": "ship",
       "pred": "airplane",
-      "confidence": 0.9999901056289673,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9999841451644897,
+      "image_path": "miss_026.png",
+      "image_available": true
     },
     {
-      "true": "bird",
-      "pred": "airplane",
-      "confidence": 0.6355026960372925,
-      "image_path": null,
-      "image_available": false
+      "true": "automobile",
+      "pred": "horse",
+      "confidence": 0.9888066053390503,
+      "image_path": "miss_027.png",
+      "image_available": true
     },
     {
       "true": "horse",
-      "pred": "deer",
-      "confidence": 0.9768502712249756,
-      "image_path": null,
-      "image_available": false
+      "pred": "cat",
+      "confidence": 0.657893717288971,
+      "image_path": "miss_028.png",
+      "image_available": true
     },
     {
       "true": "cat",
       "pred": "dog",
-      "confidence": 0.9441470503807068,
-      "image_path": null,
-      "image_available": false
-    },
-    {
-      "true": "cat",
-      "pred": "dog",
-      "confidence": 0.999927282333374,
-      "image_path": null,
-      "image_available": false
+      "confidence": 0.9823125004768372,
+      "image_path": "miss_029.png",
+      "image_available": true
     }
   ]
 }

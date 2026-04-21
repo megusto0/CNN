@@ -4,7 +4,7 @@
   "input_image": "input.png",
   "true": "cat",
   "predicted": "cat",
-  "probability": 0.7917802929878235,
+  "probability": 0.5526770353317261,
   "layers": [
     {
       "name": "Input",

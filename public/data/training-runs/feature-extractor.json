@@ -3,13 +3,13 @@
   "display_name": "ResNet-18 feature extractor",
   "source": "/home/megusto/zlm/labwork/artifacts/results.json",
   "real_metrics": true,
-  "misclassification_images": "metadata only",
+  "misclassification_images": "exported Colab images",
   "epochs": 10,
   "batch_size": 64,
   "optimizer": "Adam",
   "lr": 0.001,
   "trainable_params": 5130,
-  "time_min": null,
+  "time_min": 15.217705893516541,
   "train_loss": [
     0.8539770955403646,
     0.629478614086575,
@@ -58,6 +58,19 @@
     0.7936,
     0.801
   ],
+  "epoch_seconds": [
+    90.92317056655884,
+    91.01799726486206,
+    90.7515606880188,
+    91.60475707054138,
+    90.66245794296265,
+    91.36521506309509,
+    91.30663681030273,
+    91.52220487594604,
+    91.62488317489624,
+    92.28190875053406
+  ],
+  "eval_time_sec": 18.82062840461731,
   "test_acc": 0.8092,
   "confusion": [
     [
@@ -198,211 +211,211 @@
       "true": "airplane",
       "pred": "bird",
       "confidence": 0.2799038290977478,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_000.png",
+      "image_available": true
     },
     {
       "true": "automobile",
       "pred": "truck",
       "confidence": 0.8149913549423218,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_001.png",
+      "image_available": true
     },
     {
       "true": "bird",
       "pred": "cat",
       "confidence": 0.3839072287082672,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_002.png",
+      "image_available": true
     },
     {
       "true": "deer",
       "pred": "cat",
       "confidence": 0.6451302170753479,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_003.png",
+      "image_available": true
     },
     {
       "true": "automobile",
       "pred": "truck",
       "confidence": 0.7871755361557007,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_004.png",
+      "image_available": true
     },
     {
       "true": "deer",
       "pred": "airplane",
       "confidence": 0.7139651775360107,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_005.png",
+      "image_available": true
     },
     {
       "true": "frog",
       "pred": "cat",
       "confidence": 0.3945811688899994,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_006.png",
+      "image_available": true
     },
     {
       "true": "horse",
       "pred": "cat",
       "confidence": 0.492803692817688,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_007.png",
+      "image_available": true
     },
     {
       "true": "horse",
       "pred": "cat",
       "confidence": 0.8633760213851929,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_008.png",
+      "image_available": true
     },
     {
       "true": "deer",
       "pred": "dog",
       "confidence": 0.4450991749763489,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_009.png",
+      "image_available": true
     },
     {
       "true": "frog",
       "pred": "cat",
       "confidence": 0.6162686347961426,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_010.png",
+      "image_available": true
     },
     {
       "true": "frog",
       "pred": "cat",
       "confidence": 0.47232136130332947,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_011.png",
+      "image_available": true
     },
     {
       "true": "airplane",
       "pred": "truck",
       "confidence": 0.9135464429855347,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_012.png",
+      "image_available": true
     },
     {
       "true": "cat",
       "pred": "dog",
       "confidence": 0.8511844873428345,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_013.png",
+      "image_available": true
     },
     {
       "true": "bird",
       "pred": "cat",
       "confidence": 0.48798543214797974,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_014.png",
+      "image_available": true
     },
     {
       "true": "ship",
       "pred": "dog",
       "confidence": 0.3582639992237091,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_015.png",
+      "image_available": true
     },
     {
       "true": "airplane",
       "pred": "ship",
       "confidence": 0.5150629878044128,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_016.png",
+      "image_available": true
     },
     {
       "true": "airplane",
       "pred": "bird",
       "confidence": 0.3726733922958374,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_017.png",
+      "image_available": true
     },
     {
       "true": "bird",
       "pred": "frog",
       "confidence": 0.4830320477485657,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_018.png",
+      "image_available": true
     },
     {
       "true": "deer",
       "pred": "cat",
       "confidence": 0.5407614707946777,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_019.png",
+      "image_available": true
     },
     {
       "true": "horse",
       "pred": "cat",
       "confidence": 0.7448448538780212,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_020.png",
+      "image_available": true
     },
     {
       "true": "airplane",
       "pred": "bird",
       "confidence": 0.8734868764877319,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_021.png",
+      "image_available": true
     },
     {
       "true": "dog",
       "pred": "cat",
       "confidence": 0.7377521395683289,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_022.png",
+      "image_available": true
     },
     {
       "true": "automobile",
       "pred": "cat",
       "confidence": 0.49813970923423767,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_023.png",
+      "image_available": true
     },
     {
       "true": "cat",
       "pred": "horse",
       "confidence": 0.49007415771484375,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_024.png",
+      "image_available": true
     },
     {
       "true": "horse",
       "pred": "bird",
       "confidence": 0.4768136739730835,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_025.png",
+      "image_available": true
     },
     {
       "true": "bird",
       "pred": "dog",
       "confidence": 0.8523676991462708,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_026.png",
+      "image_available": true
     },
     {
       "true": "dog",
       "pred": "cat",
       "confidence": 0.7903870940208435,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_027.png",
+      "image_available": true
     },
     {
       "true": "bird",
       "pred": "cat",
       "confidence": 0.7076489329338074,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_028.png",
+      "image_available": true
     },
     {
       "true": "bird",
       "pred": "cat",
       "confidence": 0.8390681147575378,
-      "image_path": null,
-      "image_available": false
+      "image_path": "miss_029.png",
+      "image_available": true
     }
   ]
 }

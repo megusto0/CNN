@@ -4,7 +4,7 @@
   "input_image": "input.png",
   "true": "frog",
   "predicted": "frog",
-  "probability": 0.9748249053955078,
+  "probability": 0.994094967842102,
   "layers": [
     {
       "name": "Input",

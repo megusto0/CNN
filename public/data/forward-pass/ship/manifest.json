@@ -4,7 +4,7 @@
   "input_image": "input.png",
   "true": "ship",
   "predicted": "ship",
-  "probability": 0.9991744160652161,
+  "probability": 0.9994741082191467,
   "layers": [
     {
       "name": "Input",
