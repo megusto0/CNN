@@ -1,17 +1,23 @@
 import type { RouteObject } from "react-router-dom";
 import Shell from "./components/layout/Shell";
-import Overview from "./pages/Overview";
-import Theory from "./pages/Theory";
 import Assignment from "./pages/Assignment";
-import Playground from "./pages/Playground";
-import Transfer from "./pages/Transfer";
-import Training from "./pages/Training";
 import Compare from "./pages/Compare";
+import Glossary from "./pages/Glossary";
+import Landing from "./pages/Landing";
+import Overview from "./pages/Overview";
+import Playground from "./pages/Playground";
 import Submit from "./pages/Submit";
+import Theory from "./pages/Theory";
+import Training from "./pages/Training";
+import Transfer from "./pages/Transfer";
+import StepPage from "./pages/StepPage";
 
 export const routes: RouteObject[] = [
+  { path: "/", element: <Landing /> },
+  { path: "/glossary", element: <Glossary /> },
+  { path: "/:stepId", element: <StepPage /> },
   {
-    path: "/",
+    path: "/legacy",
     element: <Shell />,
     children: [
       { index: true, element: <Overview /> },

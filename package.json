@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^4.22.0",
     "d3-array": "^3.2.4",
     "d3-axis": "^3.0.0",
     "d3-scale": "^4.0.2",

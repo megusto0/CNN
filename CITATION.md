@@ -1,5 +1,33 @@
 # Data Sources
 
+## v3 local development assets
+
+Generated: 2026-04-21
+
+Generator: `scripts/generate-training-data.py`
+
+Purpose: local UI development and deterministic smoke testing for the guided tour.
+
+Quality flag: development seed. Replace with real Colab outputs before using the stand as a graded/public laboratory reference.
+
+Reference metrics currently shipped for development:
+
+- Scratch CNN: test accuracy 0.742, trainable params 620 362
+- ResNet-18 feature extractor: test accuracy 0.821, trainable params 5 130
+- ResNet-18 fine-tune: test accuracy 0.883, trainable params 8 390 666
+
+The intended publication source for these files is `colab/cnn-lab.ipynb` run end-to-end on Colab T4, followed by forward-pass activation export from the trained scratch CNN.
+
+## Preset Images
+
+Downloaded: 2026-04-21
+
+Downloader: `scripts/download-preset-images.py`
+
+Source catalog: `public/data/preset-image-sources.json`
+
+The preset images under `public/data/transfer-presets/` and `public/images/conv-presets/` are normalized crops from Wikimedia Commons files. Licenses in the current set include CC0, public domain, CC BY 2.0, CC BY-SA 3.0, and CC BY-SA 4.0. Keep the source catalog with deployments so attribution can be audited.
+
 ## torchvision.models metrics
 
 Source: [PyTorch torchvision.models documentation](https://pytorch.org/vision/stable/models.html)

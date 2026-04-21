@@ -1,6 +1,6 @@
 # CNN Lab Stand
 
-Интерактивный стенд для лабораторной работы по свёрточным нейронным сетям и transfer learning.
+Интерактивный стенд v3 для лабораторной работы по CNN и transfer learning. Главный сценарий теперь линейный: landing page и 11 шагов `/#/1` ... `/#/11`. Старые страницы оставлены только под `/legacy/*`.
 
 ## Запуск
 
@@ -9,55 +9,98 @@ pnpm install
 pnpm dev
 ```
 
-## Сборка
+## Проверка
 
 ```bash
+pnpm lint
 pnpm build
 ```
 
-Результат в `dist/`. Деплой — любой статический хостинг (GitHub Pages, Cloudflare Pages).
+Результат сборки находится в `dist/`. Приложение статическое, поэтому деплой подходит для GitHub Pages, Cloudflare Pages или любого static hosting.
 
-## Генерация ONNX-ассетов
+## Маршруты v3
 
-Для работы Transfer Demo нужны файлы в `public/models/`:
+- `/#/` — landing page
+- `/#/1` ... `/#/11` — линейный guided tour
+- `/#/glossary` — краткий справочник
+- `/#/legacy/*` — старые v1 страницы для сравнения во время миграции
+
+## Данные и ассеты
+
+Для локальной разработки есть генератор:
+
+```bash
+python3 scripts/generate-training-data.py
+python3 scripts/download-preset-images.py
+```
+
+Он создает:
+
+- `public/data/cifar-samples.bin`
+- `public/data/training-runs/{scratch,feature-extractor,fine-tune}.json`
+- `public/data/training-runs/summary.json`
+- `public/data/misclassifications/*`
+- `public/data/forward-pass/*`
+- `public/data/transfer-presets/*`
+- `public/images/conv-presets/*`
+- `public/data/preset-image-sources.json`
+- `colab/cnn-lab.ipynb`
+
+Важно: локальные JSON/bin training assets являются воспроизводимым development seed. Для публикации лабораторной их нужно заменить результатами полного запуска `colab/cnn-lab.ipynb` на Colab T4 и выгрузкой активаций из настоящей обученной scratch CNN. Preset images скачиваются отдельно из Wikimedia Commons и имеют provenance в `public/data/preset-image-sources.json`.
+
+## CoLab notebook
+
+Ноутбук лежит в `colab/cnn-lab.ipynb` и отражает нужную структуру из 12 ячеек: setup, CIFAR-10 data, scratch CNN, обучение и оценка, feature extractor, fine-tune, экспорт `results.json`.
+
+## Real Step 6 forward pass
+
+Step 6 читает активации из `public/data/forward-pass/{cat,dog,automobile,ship,frog}/`.
+
+Чтобы заменить development seed на реальные активации:
+
+1. Запустите `colab/cnn-lab.ipynb` до конца.
+2. Скачайте `scratch-cnn.pt`.
+3. Выполните:
+
+```bash
+pip install torch torchvision pillow numpy
+python3 scripts/dump-forward-pass.py \
+  --checkpoint artifacts/scratch-cnn.pt \
+  --out public/data/forward-pass \
+  --download
+```
+
+Скрипт выберет по одному изображению CIFAR-10 для `cat`, `dog`, `automobile`, `ship`, `frog`, сохранит `input.png`, бинарные `layer_XX.bin`, веса фильтров и `manifest.json`.
+
+## ONNX ResNet-50
+
+Для настоящего live-инференса Step 7 нужны файлы в `public/models/`:
 
 ```bash
 pip install torch torchvision onnx onnxruntime
-python scripts/export-resnet.py
+python3 scripts/export-resnet.py
 ```
 
-Необходимые файлы:
-- `resnet50-int8.onnx` (~25MB, квантованный классификатор)
-- `resnet50-lastconv.onnx` (feature map до avgpool для CAM)
-- `resnet50-fc-weight.bin` (веса fc-слоя для CAM)
+Ожидаемые файлы:
 
-Без этих файлов Transfer Demo покажет сообщение об ошибке при инференсе.
+- `resnet50-int8.onnx`
+- `resnet50-lastconv.onnx`
+- `resnet50-fc-weight.bin`
+- `resnet50-fc-bias.bin`
 
 ## Технологии
 
-- Vite 5 + TypeScript (strict)
-- React 18 с React Router 6 (hash routing)
-- Tailwind 3 (utility-only) + custom design tokens
-- Motion (Framer Motion) для анимаций
-- D3 7 для визуализаций
-- ONNX Runtime Web (WASM + SIMD) для ResNet-50
-- TensorFlow.js для MNIST training demo (code-split)
+- Vite + TypeScript strict
+- React + React Router hash routing
+- Tailwind 3 + local design tokens
+- D3 для графиков
+- ONNX Runtime Web для ResNet-50 legacy/live assets
+- Self-hosted Inter and JetBrains Mono fonts
 
-## Структура
+## Что удалено из основного сценария
 
-```
-src/
-├── components/     # Переиспользуемые UI-компоненты
-├── features/       # Фичи: conv-playground, transfer-demo, mnist-training...
-├── pages/          # Страницы (роуты)
-├── content/        # Теория (React-компоненты вместо MDX)
-├── lib/            # Утилиты: onnx, cam, conv, storage
-└── design/         # Design tokens, reset CSS, motion configs
-```
+- отдельные `/training`, `/playground`, `/compare`, `/submit` маршруты
+- TF.js MNIST training demo
+- синтетическое browser training как педагогический сценарий
 
-## Ограничения v1
-
-- Только тёмная тема
-- Только русский язык
-- ONNX-модели нужно генерировать вручную
-- MNIST training использует синтетические данные для демо
+Все обучение CIFAR-10 должно происходить в Colab, а сайт показывает интерактивную математику, live/precomputed inference views и replay сохраненных результатов.

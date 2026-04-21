@@ -1,0 +1,23 @@
+[
+  {
+    "id": "scratch",
+    "name": "Scratch CNN",
+    "trainable_params": 620362,
+    "time_min": 10,
+    "test_acc": 0.742
+  },
+  {
+    "id": "feature_extractor",
+    "name": "ResNet-18 feature extractor",
+    "trainable_params": 5130,
+    "time_min": 4,
+    "test_acc": 0.821
+  },
+  {
+    "id": "fine_tune",
+    "name": "ResNet-18 fine-tune",
+    "trainable_params": 8390666,
+    "time_min": 10,
+    "test_acc": 0.883
+  }
+]

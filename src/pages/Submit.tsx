@@ -61,19 +61,14 @@ const items: CheckItem[] = [
   },
 ];
 
-const URL_RE = /^https:\/\/(github|gitlab)\.com\/[^\/]+\/[^\/]+\/?$/;
+const URL_RE = /^https:\/\/(github|gitlab)\.com\/[^/]+\/[^/]+\/?$/;
 
 export default function Submit() {
-  const [checked, setChecked] = useState<Record<string, boolean>>({});
+  const [checked, setChecked] = useState<Record<string, boolean>>(() => load<Record<string, boolean>>(KEYS.submission) ?? {});
   const [repoUrl, setRepoUrl] = useState("");
   const [urlError, setUrlError] = useState("");
   const [pulseIds, setPulseIds] = useState<Set<string>>(new Set());
   const itemRefs = useRef<Record<string, HTMLLabelElement | null>>({});
-
-  useEffect(() => {
-    const saved = load<Record<string, boolean>>(KEYS.submission);
-    if (saved) setChecked(saved);
-  }, []);
 
   useEffect(() => {
     save(KEYS.submission, checked);

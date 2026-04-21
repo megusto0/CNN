@@ -1,0 +1,137 @@
+{
+  "layers": [
+    {
+      "name": "Input",
+      "shape": [
+        3,
+        32,
+        32
+      ],
+      "file": "layer_00.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "Conv1",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "file": "layer_01.bin",
+      "dtype": "float32",
+      "params": 896
+    },
+    {
+      "name": "ReLU1",
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "file": "layer_02.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "MaxPool1",
+      "shape": [
+        32,
+        16,
+        16
+      ],
+      "file": "layer_03.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "Conv2",
+      "shape": [
+        64,
+        16,
+        16
+      ],
+      "file": "layer_04.bin",
+      "dtype": "float32",
+      "params": 18496
+    },
+    {
+      "name": "ReLU2",
+      "shape": [
+        64,
+        16,
+        16
+      ],
+      "file": "layer_05.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "MaxPool2",
+      "shape": [
+        64,
+        8,
+        8
+      ],
+      "file": "layer_06.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "Conv3",
+      "shape": [
+        128,
+        8,
+        8
+      ],
+      "file": "layer_07.bin",
+      "dtype": "float32",
+      "params": 73856
+    },
+    {
+      "name": "ReLU3",
+      "shape": [
+        128,
+        8,
+        8
+      ],
+      "file": "layer_08.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "MaxPool3",
+      "shape": [
+        128,
+        4,
+        4
+      ],
+      "file": "layer_09.bin",
+      "dtype": "float32",
+      "params": 0
+    },
+    {
+      "name": "Flatten",
+      "shape": [
+        2048
+      ],
+      "file": "layer_10.bin",
+      "dtype": "float32",
+      "params": 0
+    }
+  ],
+  "filters": {},
+  "commentary": {
+    "Input": "Input показывает, как меняется представление объекта automobile.",
+    "Conv1": "Conv1 показывает, как меняется представление объекта automobile.",
+    "ReLU1": "ReLU1 показывает, как меняется представление объекта automobile.",
+    "MaxPool1": "MaxPool1 показывает, как меняется представление объекта automobile.",
+    "Conv2": "Conv2 показывает, как меняется представление объекта automobile.",
+    "ReLU2": "ReLU2 показывает, как меняется представление объекта automobile.",
+    "MaxPool2": "MaxPool2 показывает, как меняется представление объекта automobile.",
+    "Conv3": "Conv3 показывает, как меняется представление объекта automobile.",
+    "ReLU3": "ReLU3 показывает, как меняется представление объекта automobile.",
+    "MaxPool3": "MaxPool3 показывает, как меняется представление объекта automobile.",
+    "Flatten": "Flatten показывает, как меняется представление объекта automobile."
+  }
+}

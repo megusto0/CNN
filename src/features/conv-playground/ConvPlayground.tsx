@@ -31,27 +31,6 @@ export default function ConvPlayground() {
   const [hoverOut, setHoverOut] = useState<{ x: number; y: number } | null>(null);
   const rafRef = useRef(0);
 
-  useEffect(() => {
-    const canvas = inputCanvasRef.current;
-    if (!canvas) return;
-    canvas.width = IMG_SIZE;
-    canvas.height = IMG_SIZE;
-    const ctx = canvas.getContext("2d")!;
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, IMG_SIZE, IMG_SIZE);
-      imageDataRef.current = ctx.getImageData(0, 0, IMG_SIZE, IMG_SIZE);
-      recompute();
-    };
-    img.onerror = () => {
-      generateCheckerboard(ctx);
-      imageDataRef.current = ctx.getImageData(0, 0, IMG_SIZE, IMG_SIZE);
-      recompute();
-    };
-    img.src = `/images/conv-presets/${presetName}.png`;
-  }, [presetName]);
-
   const recompute = useCallback(() => {
     if (!imageDataRef.current) return;
     const data = imageDataRef.current.data;
@@ -73,6 +52,27 @@ export default function ConvPlayground() {
     }
     ctx.putImageData(outImg, 0, 0);
   }, [kernel, stride, pad, useRelu]);
+
+  useEffect(() => {
+    const canvas = inputCanvasRef.current;
+    if (!canvas) return;
+    canvas.width = IMG_SIZE;
+    canvas.height = IMG_SIZE;
+    const ctx = canvas.getContext("2d")!;
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      ctx.drawImage(img, 0, 0, IMG_SIZE, IMG_SIZE);
+      imageDataRef.current = ctx.getImageData(0, 0, IMG_SIZE, IMG_SIZE);
+      recompute();
+    };
+    img.onerror = () => {
+      generateCheckerboard(ctx);
+      imageDataRef.current = ctx.getImageData(0, 0, IMG_SIZE, IMG_SIZE);
+      recompute();
+    };
+    img.src = `/images/conv-presets/${presetName}.png`;
+  }, [presetName, recompute]);
 
   useEffect(() => {
     cancelAnimationFrame(rafRef.current);
@@ -156,7 +156,7 @@ export default function ConvPlayground() {
             )}
           </div>
           <div className="flex gap-2 mt-1">
-            {["checker", "cameraman", "lena-crop", "cat"].map((name) => (
+            {["checker", "cameraman", "portrait", "cat"].map((name) => (
               <button
                 key={name}
                 onClick={() => setPresetName(name)}

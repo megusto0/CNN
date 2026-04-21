@@ -1,0 +1,502 @@
+[
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_00.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_01.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_02.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_03.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_04.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_05.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_06.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_07.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_08.png"
+  },
+  {
+    "label": 0,
+    "className": "airplane",
+    "filename": "airplane_09.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_00.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_01.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_02.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_03.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_04.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_05.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_06.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_07.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_08.png"
+  },
+  {
+    "label": 1,
+    "className": "automobile",
+    "filename": "automobile_09.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_00.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_01.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_02.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_03.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_04.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_05.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_06.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_07.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_08.png"
+  },
+  {
+    "label": 2,
+    "className": "bird",
+    "filename": "bird_09.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_00.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_01.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_02.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_03.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_04.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_05.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_06.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_07.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_08.png"
+  },
+  {
+    "label": 3,
+    "className": "cat",
+    "filename": "cat_09.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_00.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_01.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_02.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_03.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_04.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_05.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_06.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_07.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_08.png"
+  },
+  {
+    "label": 4,
+    "className": "deer",
+    "filename": "deer_09.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_00.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_01.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_02.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_03.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_04.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_05.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_06.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_07.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_08.png"
+  },
+  {
+    "label": 5,
+    "className": "dog",
+    "filename": "dog_09.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_00.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_01.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_02.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_03.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_04.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_05.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_06.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_07.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_08.png"
+  },
+  {
+    "label": 6,
+    "className": "frog",
+    "filename": "frog_09.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_00.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_01.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_02.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_03.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_04.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_05.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_06.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_07.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_08.png"
+  },
+  {
+    "label": 7,
+    "className": "horse",
+    "filename": "horse_09.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_00.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_01.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_02.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_03.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_04.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_05.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_06.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_07.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_08.png"
+  },
+  {
+    "label": 8,
+    "className": "ship",
+    "filename": "ship_09.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_00.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_01.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_02.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_03.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_04.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_05.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_06.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_07.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_08.png"
+  },
+  {
+    "label": 9,
+    "className": "truck",
+    "filename": "truck_09.png"
+  }
+]

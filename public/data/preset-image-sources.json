@@ -1,0 +1,185 @@
+[
+  {
+    "key": "cat",
+    "title": "File:Tabby cat with blue eyes-3336579.jpg",
+    "page": "Tabby cat with blue eyes-3336579",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://pixabay.com/en/users/AdinaVoicu-485024/\">AdinaVoicu</a>",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_url": "Portrait of a black tabby and white cat with Dominant Blue Eyes (DBE)",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Tabby_cat_with_blue_eyes-3336579.jpg/1920px-Tabby_cat_with_blue_eyes-3336579.jpg",
+    "outputs": [
+      "data/transfer-presets/cat.png",
+      "images/conv-presets/cat.png"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "dog",
+    "title": "File:Golden Retriever Carlos (10581910556).jpg",
+    "page": "Golden Retriever Carlos (10581910556)",
+    "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/107086296@N08\">Dirk Vorderstraße</a>",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_url": "Stehfoto, Datum/Uhrzeit: 24.03.2013 10:22:21",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Golden_Retriever_Carlos_%2810581910556%29.jpg",
+    "outputs": [
+      "data/transfer-presets/dog.png",
+      "images/conv-presets/dog.jpg"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "car",
+    "title": "File:Dülmen, Wiesmann Sports Cars, Wiesmann Roadster -- 2018 -- 9552-4.jpg",
+    "page": "Dülmen, Wiesmann Sports Cars, Wiesmann Roadster -- 2018 -- 9552-4",
+    "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q34788025\" class=\"extiw\" title=\"d:Q34788025\"><span title=\"German photographer and mathematician\">Dietmar Rabich</a></bdi>",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "Wiesmann Roadster (study) at <a href=\"https://en.wikipedia.org/wiki/Wiesmann_GmbH\" class=\"extiw\" title=\"en:Wiesmann GmbH\">Wiesmann Sports Cars</a>, <a href=\"https://en.wikipedia.org/wiki/D%C3%BClmen\" class=\"extiw\" title=\"en:Dülmen\">Dülmen</a>, <a href=\"https://en.wikipedia.org/wiki/North_Rhine-Westphalia\" class=\"extiw\" title=\"en:North Rhine-Westphalia\">North Rhine-Westphalia</a>, Germany<br><small>Wiesmann is a German sports car manufacturer based in Dülmen, founded in 1988 by brothers Martin and Friedhelm Wiesmann. The company became known for its handcrafted, exclusive sports cars with a retro design.<br>Its cars are characterized by a combination of classic lines—long hood, short overhangs, curved fenders—and modern technology. The company logo, a gecko, stands for traction and road holding. Production took place in a striking factory with a gecko-shaped roof.<br>Technically, Wiesmann relied on powerful engines from <a href=\"https://en.wikipedia.org/wiki/BMW\" class=\"extiw\" title=\"en:BMW\">BMW</a>. Models such as the Roadster MF3, MF4, and MF5 offered powerful six- and V8 engines, rear-wheel drive, and a very direct driving experience. The vehicles were considered purist, light, and strongly driver-oriented—without superfluous comfort, but with a high-quality interior in leather and aluminum.<br>In 2013, Wiesmann filed for bankruptcy and was later reorganized under new ownership.</small>",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/D%C3%BClmen%2C_Wiesmann_Sports_Cars%2C_Wiesmann_Roadster_--_2018_--_9552-4.jpg/1920px-D%C3%BClmen%2C_Wiesmann_Sports_Cars%2C_Wiesmann_Roadster_--_2018_--_9552-4.jpg",
+    "outputs": [
+      "data/transfer-presets/car.png",
+      "data/transfer-presets/automobile.png",
+      "images/conv-presets/car.jpg"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "pizza",
+    "title": "File:Pizza 9.jpg",
+    "page": "Pizza 9",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Bania_the_boy&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Bania the boy (page does not exist)\">Bania the boy</a>",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "Pizza from pizza hut",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pizza_9.jpg/1920px-Pizza_9.jpg",
+    "outputs": [
+      "data/transfer-presets/pizza.png"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "ship",
+    "title": "File:Container ship Maersk Surabaya in Fremantle Harbour, July 2021 03.jpg",
+    "page": "Container ship Maersk Surabaya in Fremantle Harbour, July 2021 03",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Calistemon\" title=\"User:Calistemon\">Calistemon</a>",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "The container ship Maersk Surabaya in Fremantle Harbour, Western Australia.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Container_ship_Maersk_Surabaya_in_Fremantle_Harbour%2C_July_2021_03.jpg/1920px-Container_ship_Maersk_Surabaya_in_Fremantle_Harbour%2C_July_2021_03.jpg",
+    "outputs": [
+      "data/transfer-presets/ship.png"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "ship-cifar-resize",
+    "title": "File:Container ship Maersk Surabaya in Fremantle Harbour, July 2021 03.jpg",
+    "page": "Container ship Maersk Surabaya in Fremantle Harbour, July 2021 03",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Calistemon\" title=\"User:Calistemon\">Calistemon</a>",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "The container ship Maersk Surabaya in Fremantle Harbour, Western Australia.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Container_ship_Maersk_Surabaya_in_Fremantle_Harbour%2C_July_2021_03.jpg/1920px-Container_ship_Maersk_Surabaya_in_Fremantle_Harbour%2C_July_2021_03.jpg",
+    "outputs": [
+      "data/transfer-presets/cifar-resize.png"
+    ],
+    "pixelated_to_32x32_then_upscaled": true
+  },
+  {
+    "key": "frog",
+    "title": "File:Red eyed tree frog edit2.jpg",
+    "page": "Red eyed tree frog edit2",
+    "artist": "<a href=\"https://en.wikipedia.org/wiki/User:Careyjamesbalboa\" class=\"extiw\" title=\"en:User:Careyjamesbalboa\">Careyjamesbalboa</a> (Carey James Balboa)",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "Red-eyed Tree Frog (<i><a href=\"https://en.wikipedia.org/wiki/Agalychnis_callidryas\" class=\"extiw\" title=\"en:Agalychnis callidryas\">Agalychnis callidryas</a></i>), photographed near Playa Jaco in Costa Rica (retouched version).",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Red_eyed_tree_frog_edit2.jpg/1920px-Red_eyed_tree_frog_edit2.jpg",
+    "outputs": [
+      "data/transfer-presets/frog.png",
+      "images/conv-presets/frog.jpg"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "bird",
+    "title": "File:Chipping sparrow (05555).jpg",
+    "page": "Chipping sparrow (05555)",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Rhododendrites\" title=\"User:Rhododendrites\">Rhododendrites</a>",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_url": "Chipping sparrow in Green-Wood Cemetery (Brooklyn, NY, USA)",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Chipping_sparrow_%2805555%29.jpg/1920px-Chipping_sparrow_%2805555%29.jpg",
+    "outputs": [
+      "images/conv-presets/bird.jpg"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "flower",
+    "title": "File:Sunflower head 2015 G1.jpg",
+    "page": "Sunflower head 2015 G1",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:George_Chernilevsky\" title=\"User:George Chernilevsky\">George Chernilevsky</a>",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "Sunflower head. Ukraine, Vinnytsia Rajon.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Sunflower_head_2015_G1.jpg/1920px-Sunflower_head_2015_G1.jpg",
+    "outputs": [
+      "images/conv-presets/flower.jpg"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "food",
+    "title": "File:Hamburger (8).jpg",
+    "page": "Hamburger (8)",
+    "artist": "Thiago Fior de Castro",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "Wikipédia",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hamburger_%288%29.jpg/1920px-Hamburger_%288%29.jpg",
+    "outputs": [
+      "images/conv-presets/food.jpg"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "cameraman",
+    "title": "File:Large-format-camera Tambra.jpg",
+    "page": "Large-format-camera Tambra",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Moroder\" title=\"User:Moroder\">User:Moroder</a>",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_url": "Large format \"Reisekamera\".",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Large-format-camera_Tambra.jpg",
+    "outputs": [
+      "images/conv-presets/cameraman.png"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "portrait",
+    "title": "File:Vermeer-Portrait of a Young Woman.jpg",
+    "page": "<div class=\"fn\"> <p><i>Study of a young woman</i>.<sup id=\"cite_ref-1\" class=\"reference\"><a href=\"#cite_note-1\"><span class=\"cite-bracket\">[1<span class=\"cite-bracket\">]</a></sup> <b>Alternative title(s): </b><br> </p> <i>Portrait of a Young Woman</i>.</div>",
+    "artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Johannes_Vermeer\" class=\"extiw\" title=\"w:en:Johannes Vermeer\"><span title=\"Dutch painter (1632–1675)\">Johannes Vermeer</a></bdi>",
+    "license": "Public domain",
+    "license_url": "",
+    "source_url": "<a href=\"https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D8%AA%D8%B1%D9%87_%D8%A8%D8%A7%D9%86%D9%88%DB%8C_%D8%AC%D9%88%D8%A7%D9%86\" class=\"extiw\" title=\"fa:پرتره بانوی جوان\">پرتره بانوی جوان</a> یا <i>بانوی با روسری</i> اثر <a href=\"https://fa.wikipedia.org/wiki/%DB%8C%D9%88%D9%87%D8%A7%D9%86%D8%B3_%D9%81%D8%B1%D9%85%DB%8C%D8%B1\" class=\"extiw\" title=\"fa:یوهانس فرمیر\">یوهانس فرمیر</a> (۱۶yhdhd۶۶-۱۶۶۷)<br>این نقاشی که به وسیله <a href=\"https://fa.wikipedia.org/wiki/%D8%B1%D9%86%DA%AF_%D8%B1%D9%88%D8%BA%D9%86\" class=\"extiw\" title=\"fa:رنگ روغن\">رنگ روغن</a> روی <a href=\"https://fa.wikipedia.org/wiki/%D8%A8%D9%88%D9%85_%D9%86%D9%82%D8%A7%D8%B4%DB%8C\" class=\"extiw\" title=\"fa:بوم نقاشی\">بوم</a> کشیده شده است در <a href=\"https://fa.wikipedia.org/wiki/%D9%85%D9%88%D8%B2%D9%87_%D9%85%D8%AA%D8%B1%D9%88%D9%BE%D9%88%D9%84%DB%8C%D8%AA%D9%86_%D9%86%DB%8C%D9%88%DB%8C%D9%88%D8%B1%DA%A9\" class=\"extiw\" title=\"fa:موزه متروپولیتن نیویورک\">موزه متروپولیتن نیویورک</a> نگهداری می‌گردد.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Vermeer-Portrait_of_a_Young_Woman.jpg/1920px-Vermeer-Portrait_of_a_Young_Woman.jpg",
+    "outputs": [
+      "images/conv-presets/portrait.png",
+      "images/conv-presets/lena-crop.png"
+    ],
+    "pixelated_to_32x32_then_upscaled": false
+  },
+  {
+    "key": "checker",
+    "title": "Generated checkerboard",
+    "artist": "cnn-lab-stand",
+    "license": "Project-generated",
+    "outputs": [
+      "images/conv-presets/checker.png"
+    ]
+  }
+]

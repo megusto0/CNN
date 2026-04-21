@@ -183,7 +183,7 @@ export default function TransferDemo() {
               className="rounded-md"
               style={{ width: 320, height: 320, objectFit: "cover", border: "1px solid var(--border-subtle)" }}
             />
-            {showCAM && camCanvasRef.current && (
+            {showCAM && (
               <canvas
                 ref={camCanvasRef}
                 className="absolute inset-0 rounded-md"

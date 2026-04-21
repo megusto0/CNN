@@ -1,0 +1,375 @@
+{
+  "name": "fine_tune",
+  "display_name": "ResNet-18 fine-tune",
+  "epochs": 10,
+  "batch_size": 128,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "trainable_params": 8390666,
+  "time_min": 10,
+  "train_loss": [
+    1.796,
+    1.3558,
+    1.0699,
+    0.8811,
+    0.7529,
+    0.6628,
+    0.5965,
+    0.5453,
+    0.5034,
+    0.4674
+  ],
+  "train_acc": [
+    0.275,
+    0.5183,
+    0.6739,
+    0.7744,
+    0.8404,
+    0.8848,
+    0.9156,
+    0.9379,
+    0.9549,
+    0.9685
+  ],
+  "val_loss": [
+    1.8352,
+    1.4815,
+    1.2612,
+    1.1246,
+    1.0404,
+    0.9891,
+    0.9584,
+    0.9407,
+    0.931,
+    0.9265
+  ],
+  "val_acc": [
+    0.24,
+    0.4753,
+    0.6229,
+    0.7154,
+    0.7734,
+    0.8098,
+    0.8326,
+    0.8469,
+    0.8559,
+    0.8615
+  ],
+  "test_acc": 0.883,
+  "confusion": [
+    [
+      100,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      7,
+      1
+    ],
+    [
+      1,
+      101,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      7
+    ],
+    [
+      2,
+      3,
+      102,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      3,
+      0,
+      1,
+      100,
+      3,
+      12,
+      1,
+      2,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      101,
+      1,
+      2,
+      3,
+      0,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      12,
+      1,
+      102,
+      3,
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      100,
+      1,
+      2,
+      3
+    ],
+    [
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      101,
+      3,
+      0
+    ],
+    [
+      7,
+      1,
+      2,
+      3,
+      0,
+      1,
+      2,
+      3,
+      102,
+      1
+    ],
+    [
+      1,
+      7,
+      3,
+      0,
+      1,
+      2,
+      3,
+      0,
+      1,
+      100
+    ]
+  ],
+  "per_class_acc": {
+    "airplane": 0.838,
+    "automobile": 0.847,
+    "bird": 0.856,
+    "cat": 0.865,
+    "deer": 0.874,
+    "dog": 0.883,
+    "frog": 0.892,
+    "horse": 0.901,
+    "ship": 0.91,
+    "truck": 0.919
+  },
+  "misclassifications": [
+    {
+      "image_path": "miss_000.png",
+      "true": "cat",
+      "pred": "deer",
+      "confidence": 0.56
+    },
+    {
+      "image_path": "miss_001.png",
+      "true": "deer",
+      "pred": "dog",
+      "confidence": 0.572
+    },
+    {
+      "image_path": "miss_002.png",
+      "true": "dog",
+      "pred": "frog",
+      "confidence": 0.584
+    },
+    {
+      "image_path": "miss_003.png",
+      "true": "frog",
+      "pred": "horse",
+      "confidence": 0.596
+    },
+    {
+      "image_path": "miss_004.png",
+      "true": "horse",
+      "pred": "ship",
+      "confidence": 0.608
+    },
+    {
+      "image_path": "miss_005.png",
+      "true": "ship",
+      "pred": "truck",
+      "confidence": 0.62
+    },
+    {
+      "image_path": "miss_006.png",
+      "true": "truck",
+      "pred": "airplane",
+      "confidence": 0.632
+    },
+    {
+      "image_path": "miss_007.png",
+      "true": "airplane",
+      "pred": "automobile",
+      "confidence": 0.644
+    },
+    {
+      "image_path": "miss_008.png",
+      "true": "automobile",
+      "pred": "bird",
+      "confidence": 0.656
+    },
+    {
+      "image_path": "miss_009.png",
+      "true": "bird",
+      "pred": "cat",
+      "confidence": 0.668
+    },
+    {
+      "image_path": "miss_010.png",
+      "true": "cat",
+      "pred": "deer",
+      "confidence": 0.68
+    },
+    {
+      "image_path": "miss_011.png",
+      "true": "deer",
+      "pred": "dog",
+      "confidence": 0.692
+    },
+    {
+      "image_path": "miss_012.png",
+      "true": "dog",
+      "pred": "frog",
+      "confidence": 0.704
+    },
+    {
+      "image_path": "miss_013.png",
+      "true": "frog",
+      "pred": "horse",
+      "confidence": 0.716
+    },
+    {
+      "image_path": "miss_014.png",
+      "true": "horse",
+      "pred": "ship",
+      "confidence": 0.728
+    },
+    {
+      "image_path": "miss_015.png",
+      "true": "ship",
+      "pred": "truck",
+      "confidence": 0.74
+    },
+    {
+      "image_path": "miss_016.png",
+      "true": "truck",
+      "pred": "airplane",
+      "confidence": 0.752
+    },
+    {
+      "image_path": "miss_017.png",
+      "true": "airplane",
+      "pred": "automobile",
+      "confidence": 0.764
+    },
+    {
+      "image_path": "miss_018.png",
+      "true": "automobile",
+      "pred": "bird",
+      "confidence": 0.776
+    },
+    {
+      "image_path": "miss_019.png",
+      "true": "bird",
+      "pred": "cat",
+      "confidence": 0.788
+    },
+    {
+      "image_path": "miss_020.png",
+      "true": "cat",
+      "pred": "deer",
+      "confidence": 0.8
+    },
+    {
+      "image_path": "miss_021.png",
+      "true": "deer",
+      "pred": "dog",
+      "confidence": 0.812
+    },
+    {
+      "image_path": "miss_022.png",
+      "true": "dog",
+      "pred": "frog",
+      "confidence": 0.824
+    },
+    {
+      "image_path": "miss_023.png",
+      "true": "frog",
+      "pred": "horse",
+      "confidence": 0.836
+    },
+    {
+      "image_path": "miss_024.png",
+      "true": "horse",
+      "pred": "ship",
+      "confidence": 0.848
+    },
+    {
+      "image_path": "miss_025.png",
+      "true": "ship",
+      "pred": "truck",
+      "confidence": 0.86
+    },
+    {
+      "image_path": "miss_026.png",
+      "true": "truck",
+      "pred": "airplane",
+      "confidence": 0.872
+    },
+    {
+      "image_path": "miss_027.png",
+      "true": "airplane",
+      "pred": "automobile",
+      "confidence": 0.884
+    },
+    {
+      "image_path": "miss_028.png",
+      "true": "automobile",
+      "pred": "bird",
+      "confidence": 0.896
+    },
+    {
+      "image_path": "miss_029.png",
+      "true": "bird",
+      "pred": "cat",
+      "confidence": 0.908
+    }
+  ]
+}
