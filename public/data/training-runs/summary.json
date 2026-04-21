@@ -3,21 +3,24 @@
     "id": "scratch",
     "name": "Scratch CNN",
     "trainable_params": 620362,
-    "time_min": 10,
-    "test_acc": 0.742
+    "time_min": null,
+    "test_acc": 0.8129,
+    "real_metrics": true
   },
   {
     "id": "feature_extractor",
     "name": "ResNet-18 feature extractor",
     "trainable_params": 5130,
-    "time_min": 4,
-    "test_acc": 0.821
+    "time_min": null,
+    "test_acc": 0.8092,
+    "real_metrics": true
   },
   {
     "id": "fine_tune",
     "name": "ResNet-18 fine-tune",
-    "trainable_params": 8390666,
-    "time_min": 10,
-    "test_acc": 0.883
+    "trainable_params": 8398858,
+    "time_min": null,
+    "test_acc": 0.909,
+    "real_metrics": true
   }
 ]

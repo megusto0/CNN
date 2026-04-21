@@ -44,6 +44,13 @@ const forwardPresetImages: Record<string, string> = {
 
 type RunName = "scratch" | "feature_extractor" | "fine_tune";
 
+const runOrder: RunName[] = ["scratch", "feature_extractor", "fine_tune"];
+const runLabels: Record<RunName, string> = {
+  scratch: "Scratch CNN",
+  feature_extractor: "ResNet-18 feature extractor",
+  fine_tune: "ResNet-18 fine-tune",
+};
+
 type TrainingRun = {
   name: RunName;
   display_name: string;
@@ -56,7 +63,8 @@ type TrainingRun = {
   confusion: number[][];
   per_class_acc: Record<string, number>;
   misclassifications: {
-    image_path: string;
+    image_path: string | null;
+    image_available?: boolean;
     true: string;
     pred: string;
     confidence: number;
@@ -67,8 +75,9 @@ type SummaryRow = {
   id: RunName;
   name: string;
   trainable_params: number;
-  time_min: number;
+  time_min?: number | null;
   test_acc: number;
+  real_metrics?: boolean;
 };
 
 type ForwardLayer = {
@@ -252,8 +261,8 @@ function CifarBrowser() {
                   <tr key={row.id} className="border-b" style={{ borderColor: "var(--border-subtle)" }}>
                     <td className="py-2 pr-4">{row.name}</td>
                     <td className="py-2 pr-4 font-mono">{row.trainable_params.toLocaleString("ru-RU")}</td>
-                    <td className="py-2 pr-4">~{row.time_min} мин</td>
-                    <td className="py-2 font-mono">{(row.test_acc * 100).toFixed(1)}%</td>
+                    <td className="py-2 pr-4">{formatTime(row.time_min)}</td>
+                    <td className="py-2 font-mono">{formatPercent(row.test_acc)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -760,6 +769,7 @@ function TransferLearningPanel() {
 
 function TransferModesDiagram() {
   const [mode, setMode] = useState<"feature" | "fine">("feature");
+  const [summaryRows, setSummaryRows] = useState<SummaryRow[]>([]);
   const rows = [
     ["conv1 + bn1 + relu", false, false],
     ["maxpool", false, false],
@@ -770,9 +780,18 @@ function TransferModesDiagram() {
     ["avgpool", false, false],
     ["fc 512 -> 10", true, true],
   ] as const;
+  useEffect(() => {
+    fetch("/data/training-runs/summary.json")
+      .then((res) => res.json() as Promise<SummaryRow[]>)
+      .then(setSummaryRows)
+      .catch(() => setSummaryRows(defaultSummary()));
+  }, []);
+  const selectedRunId: RunName = mode === "feature" ? "feature_extractor" : "fine_tune";
+  const selectedSummary = summaryRows.find((row) => row.id === selectedRunId)
+    ?? defaultSummary().find((row) => row.id === selectedRunId);
   const summary = mode === "feature"
-    ? { params: "5 130", memory: "Низкая", time: "~4 мин", acc: "~82%" }
-    : { params: "8.4M", memory: "Высокая", time: "~10 мин", acc: "~88%" };
+    ? { params: formatParams(selectedSummary?.trainable_params), memory: "Низкая", time: formatTime(selectedSummary?.time_min), acc: formatPercent(selectedSummary?.test_acc) }
+    : { params: formatParams(selectedSummary?.trainable_params), memory: "Высокая", time: formatTime(selectedSummary?.time_min), acc: formatPercent(selectedSummary?.test_acc) };
 
   return (
     <Panel>
@@ -809,7 +828,7 @@ function TransferModesDiagram() {
                 "Обучаемых params": summary.params,
                 "Память обучения": summary.memory,
                 "Время обучения": summary.time,
-                "Ожидаемая точность": summary.acc,
+                "Test accuracy": summary.acc,
               }).map(([key, value]) => (
                 <tr key={key} className="border-b" style={{ borderColor: "var(--border-subtle)" }}>
                   <td className="py-3 pr-4" style={{ color: "var(--text-secondary)" }}>{key}</td>
@@ -890,12 +909,15 @@ function AnalysisPanels() {
     const file = event.dataTransfer.files[0];
     if (!file) return;
     file.text().then((text) => {
-      const parsed = JSON.parse(text) as Record<string, unknown>;
-      if (!parsed.scratch || !parsed.feature_extractor || !parsed.fine_tune) {
+      const imported = normalizeImportedResults(JSON.parse(text));
+      if (!imported) {
         setOverlayName("schema error: expected scratch, feature_extractor, fine_tune");
         return;
       }
-      setOverlayName(file.name);
+      setRuns(imported);
+      setActive("scratch");
+      setEpoch(Math.max(...imported.map((run) => run.epochs), 1));
+      setOverlayName(`${file.name} loaded`);
     }).catch(() => setOverlayName("schema error"));
   }
 
@@ -1331,14 +1353,25 @@ function PerClassBars({ run }: { run: TrainingRun }) {
 function MisclassGallery({ run }: { run: TrainingRun }) {
   return (
     <div className="grid gap-3 md:grid-cols-3">
-      {run.misclassifications.slice(0, 6).map((item, index) => (
-        <div key={`${item.true}-${item.pred}-${index}`} className="rounded-md border p-3" style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-sunken)" }}>
-          <img src={`/data/misclassifications/${run.name}/${item.image_path}`} alt={`${item.true} predicted ${item.pred}`} className="mb-3 h-24 w-24 rounded-sm object-cover" />
-          <p className="text-sm">истина: {classRu[item.true]}</p>
-          <p className="text-sm">предсказано: {classRu[item.pred]}</p>
-          <p className="font-mono text-xs" style={{ color: "var(--text-tertiary)" }}>{(item.confidence * 100).toFixed(1)}%</p>
-        </div>
-      ))}
+      {run.misclassifications.slice(0, 6).map((item, index) => {
+        const imagePath = item.image_available !== false && item.image_path
+          ? `/data/misclassifications/${run.name}/${item.image_path}`
+          : null;
+        return (
+          <div key={`${item.true}-${item.pred}-${index}`} className="rounded-md border p-3" style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-sunken)" }}>
+            {imagePath ? (
+              <img src={imagePath} alt={`${item.true} predicted ${item.pred}`} className="mb-3 h-24 w-24 rounded-sm object-cover" />
+            ) : (
+              <div className="mb-3 grid h-24 w-24 place-items-center rounded-sm border px-2 text-center text-xs" style={{ borderColor: "var(--border-subtle)", color: "var(--text-tertiary)" }}>
+                image not exported
+              </div>
+            )}
+            <p className="text-sm">истина: {classRu[item.true]}</p>
+            <p className="text-sm">предсказано: {classRu[item.pred]}</p>
+            <p className="font-mono text-xs" style={{ color: "var(--text-tertiary)" }}>{formatPercent(item.confidence)}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -1373,6 +1406,88 @@ function buildReport(repo: string, finalAnswers: string[], storedAnswers: Record
   }
   lines.push("", "## 6. Что не сработало", finalAnswers[5] || "<честное описание>");
   return lines.join("\n");
+}
+
+function formatPercent(value?: number | null) {
+  return typeof value === "number" && Number.isFinite(value) ? `${(value * 100).toFixed(1)}%` : "n/a";
+}
+
+function formatTime(value?: number | null) {
+  return typeof value === "number" && Number.isFinite(value) ? `~${value.toFixed(value % 1 === 0 ? 0 : 1)} мин` : "not recorded";
+}
+
+function formatParams(value?: number | null) {
+  return typeof value === "number" && Number.isFinite(value) ? value.toLocaleString("ru-RU") : "n/a";
+}
+
+function normalizeImportedResults(parsed: unknown): TrainingRun[] | null {
+  if (!isRecord(parsed)) return null;
+  const runs = runOrder.map((runName) => {
+    const raw = parsed[runName];
+    return isRecord(raw) ? normalizeImportedRun(runName, raw) : null;
+  });
+  return runs.every(Boolean) ? runs as TrainingRun[] : null;
+}
+
+function normalizeImportedRun(runName: RunName, raw: Record<string, unknown>): TrainingRun {
+  return {
+    name: runName,
+    display_name: readString(raw, "display_name", runLabels[runName]),
+    epochs: readNumber(raw, "epochs"),
+    train_loss: readNumberArray(raw.train_loss),
+    train_acc: readNumberArray(raw.train_acc),
+    val_loss: readNumberArray(raw.val_loss),
+    val_acc: readNumberArray(raw.val_acc),
+    test_acc: readNumber(raw, "test_acc"),
+    confusion: readNumberMatrix(raw.confusion),
+    per_class_acc: readNumberRecord(raw.per_class_acc),
+    misclassifications: readMisclassifications(raw.misclassifications),
+  };
+}
+
+function readMisclassifications(value: unknown): TrainingRun["misclassifications"] {
+  if (!Array.isArray(value)) return [];
+  return value.filter(isRecord).map((item, index) => {
+    const imageAvailable = item.image_available === true;
+    const imagePath = typeof item.image_path === "string" && imageAvailable
+      ? item.image_path
+      : null;
+    return {
+      true: readString(item, "true", classes[index % classes.length]),
+      pred: readString(item, "pred", classes[(index + 1) % classes.length]),
+      confidence: readNumber(item, "confidence"),
+      image_path: imagePath,
+      image_available: imageAvailable,
+    };
+  });
+}
+
+function readNumberRecord(value: unknown): Record<string, number> {
+  if (!isRecord(value)) return {};
+  return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, Number(entry)]));
+}
+
+function readNumberMatrix(value: unknown): number[][] {
+  if (!Array.isArray(value)) return [];
+  return value.map((row) => Array.isArray(row) ? row.map(Number) : []);
+}
+
+function readNumberArray(value: unknown): number[] {
+  return Array.isArray(value) ? value.map(Number) : [];
+}
+
+function readNumber(raw: Record<string, unknown>, key: string) {
+  const value = raw[key];
+  return typeof value === "number" ? value : Number(value ?? 0);
+}
+
+function readString(raw: Record<string, unknown>, key: string, fallback: string) {
+  const value = raw[key];
+  return typeof value === "string" && value.length > 0 ? value : fallback;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 function defaultSummary(): SummaryRow[] {

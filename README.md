@@ -72,6 +72,21 @@ python3 scripts/dump-forward-pass.py \
 
 Скрипт выберет по одному изображению CIFAR-10 для `cat`, `dog`, `automobile`, `ship`, `frog`, сохранит `input.png`, бинарные `layer_XX.bin`, веса фильтров и `manifest.json`.
 
+## Real Step 1/8/10 results
+
+Step 1, Step 8 и Step 10 читают метрики из `public/data/training-runs/`.
+
+Чтобы заменить development seed на реальные метрики Colab:
+
+```bash
+python3 scripts/import-colab-results.py \
+  --results ../artifacts/results.json \
+  --scratch-checkpoint ../artifacts/scratch-cnn.pt \
+  --download
+```
+
+`results.json` содержит реальные curves, test accuracy, confusion matrix и per-class accuracy. Он не содержит пиксели misclassification images для ResNet-прогонов; поэтому Step 10 показывает реальные метаданные ошибок, а изображения выводит только там, где они действительно экспортированы или восстановлены из checkpoint.
+
 ## ONNX ResNet-50
 
 Для настоящего live-инференса Step 7 нужны файлы в `public/models/`:
