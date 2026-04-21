@@ -854,7 +854,7 @@ function ColabPanel() {
             <li>2. Обучает scratch CNN: 20 эпох.</li>
             <li>3. Обучает ResNet-18 feature extractor: 10 эпох.</li>
             <li>4. Обучает ResNet-18 fine-tune: 10 эпох.</li>
-            <li>5. Сохраняет results.json.</li>
+            <li>5. Сохраняет cnn-lab-artifacts.zip, results.json и scratch-cnn.pt.</li>
           </ol>
           <div className="mt-5 flex flex-wrap gap-3">
             <a
@@ -879,7 +879,7 @@ function ColabPanel() {
         <div className="rounded-md border p-4" style={{ borderColor: "var(--border-subtle)", backgroundColor: "var(--bg-sunken)" }}>
           <h4 className="mb-2 text-sm font-semibold">Настройки Colab</h4>
           <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-            Runtime → Change runtime type → GPU. Первый запуск скачает CIFAR-10 примерно 170 МБ. После последней ячейки скачайте results.json и перетащите его на шаг 10.
+            Runtime → Change runtime type → GPU. Первый запуск скачает CIFAR-10 примерно 170 МБ. Последняя ячейка скачает cnn-lab-artifacts.zip; в нем лежат метрики, checkpoint-файлы и изображения ошибок.
           </p>
         </div>
       </div>

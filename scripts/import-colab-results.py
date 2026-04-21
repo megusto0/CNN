@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -49,6 +50,7 @@ CIFAR_STD = (0.2470, 0.2435, 0.2616)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, default=DEFAULT_RESULTS)
+    parser.add_argument("--artifact-dir", type=Path, default=None, help="Directory containing misclassifications/{run}/ images from Colab.")
     parser.add_argument("--out", type=Path, default=PUBLIC / "data" / "training-runs")
     parser.add_argument("--misclass-out", type=Path, default=PUBLIC / "data" / "misclassifications")
     parser.add_argument("--scratch-checkpoint", type=Path, default=DEFAULT_CHECKPOINT)
@@ -84,12 +86,15 @@ def normalize_misclassifications(run: dict[str, Any], include_images: bool) -> l
 
 def normalize_run(run_id: str, run: dict[str, Any], source: Path, include_images: bool) -> dict[str, Any]:
     meta = RUN_META[run_id]
+    image_source = "exported Colab images" if include_images else "metadata only"
+    if run_id == "scratch" and include_images:
+        image_source = "exported Colab images or scratch checkpoint reconstruction"
     return {
         "name": run_id,
         "display_name": meta["display_name"],
         "source": str(source),
         "real_metrics": True,
-        "misclassification_images": "scratch checkpoint reconstruction" if include_images else "metadata only",
+        "misclassification_images": image_source,
         "epochs": int(run["epochs"]),
         "batch_size": int(run["batch_size"]),
         "optimizer": run["optimizer"],
@@ -100,6 +105,8 @@ def normalize_run(run_id: str, run: dict[str, Any], source: Path, include_images
         "train_acc": [float(value) for value in run["train_acc"]],
         "val_loss": [float(value) for value in run["val_loss"]],
         "val_acc": [float(value) for value in run["val_acc"]],
+        "epoch_seconds": [float(value) for value in run.get("epoch_seconds", [])],
+        "eval_time_sec": float(run.get("eval_time_sec", 0)),
         "test_acc": float(run["test_acc"]),
         "confusion": run["confusion"],
         "per_class_acc": {key: float(value) for key, value in run["per_class_acc"].items()},
@@ -125,6 +132,35 @@ def import_torch_modules() -> tuple[Any, Any, Any, Any]:
     from torchvision import transforms
 
     return torch, nn, torchvision, transforms
+
+
+def copy_exported_misclassification_images(args: argparse.Namespace, run_id: str, run: dict[str, Any]) -> bool:
+    artifact_dir = args.artifact_dir or args.results.parent
+    source_dir = artifact_dir / "misclassifications" / run_id
+    if not source_dir.exists():
+        return False
+
+    target_dir = args.misclass_out / run_id
+    target_dir.mkdir(parents=True, exist_ok=True)
+    for old in target_dir.glob("miss_*.png"):
+        old.unlink()
+
+    copied = 0
+    for index, item in enumerate(run.get("misclassifications", [])):
+        filename = item.get("image_path") or f"miss_{index:03d}.png"
+        source = source_dir / filename
+        if not source.exists():
+            print(f"missing exported image for {run_id}: {source}")
+            continue
+        shutil.copy2(source, target_dir / filename)
+        copied += 1
+
+    expected = len(run.get("misclassifications", []))
+    if copied != expected:
+        print(f"copied {copied}/{expected} exported misclassification images for {run_id}")
+    else:
+        print(f"copied {copied} exported misclassification images for {run_id}")
+    return copied > 0
 
 
 def export_scratch_misclassification_images(args: argparse.Namespace, scratch_run: dict[str, Any]) -> bool:
@@ -238,11 +274,16 @@ def main() -> None:
     if missing:
         raise ValueError(f"missing result keys: {missing}")
 
-    scratch_images = export_scratch_misclassification_images(args, results["scratch"])
+    copied_images = {
+        run_id: copy_exported_misclassification_images(args, run_id, results[run_id])
+        for run_id in RUN_META
+    }
+    if not copied_images["scratch"]:
+        copied_images["scratch"] = export_scratch_misclassification_images(args, results["scratch"])
 
     args.out.mkdir(parents=True, exist_ok=True)
     for run_id, meta in RUN_META.items():
-        include_images = run_id == "scratch" and scratch_images
+        include_images = copied_images[run_id]
         run = normalize_run(run_id, results[run_id], args.results, include_images)
         write_json(args.out / meta["filename"], run)
 

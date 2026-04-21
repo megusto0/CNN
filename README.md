@@ -50,7 +50,7 @@ python3 scripts/download-preset-images.py
 
 ## CoLab notebook
 
-Ноутбук лежит в `colab/cnn-lab.ipynb` и отражает нужную структуру из 12 ячеек: setup, CIFAR-10 data, scratch CNN, обучение и оценка, feature extractor, fine-tune, экспорт `results.json`.
+Ноутбук лежит в `colab/cnn-lab.ipynb` и отражает нужную структуру из 12 ячеек: setup, CIFAR-10 data, scratch CNN, обучение и оценка, feature extractor, fine-tune, экспорт `cnn-lab-artifacts.zip`.
 
 ## Real Step 6 forward pass
 
@@ -59,7 +59,7 @@ Step 6 читает активации из `public/data/forward-pass/{cat,dog,a
 Чтобы заменить development seed на реальные активации:
 
 1. Запустите `colab/cnn-lab.ipynb` до конца.
-2. Скачайте `scratch-cnn.pt`.
+2. Скачайте `cnn-lab-artifacts.zip` или `scratch-cnn.pt`.
 3. Выполните:
 
 ```bash
@@ -79,13 +79,16 @@ Step 1, Step 8 и Step 10 читают метрики из `public/data/training
 Чтобы заменить development seed на реальные метрики Colab:
 
 ```bash
+mkdir -p ../artifacts
+unzip -o ~/Downloads/cnn-lab-artifacts.zip -d ../artifacts
 python3 scripts/import-colab-results.py \
   --results ../artifacts/results.json \
+  --artifact-dir ../artifacts \
   --scratch-checkpoint ../artifacts/scratch-cnn.pt \
   --download
 ```
 
-`results.json` содержит реальные curves, test accuracy, confusion matrix и per-class accuracy. Он не содержит пиксели misclassification images для ResNet-прогонов; поэтому Step 10 показывает реальные метаданные ошибок, а изображения выводит только там, где они действительно экспортированы или восстановлены из checkpoint.
+`cnn-lab-artifacts.zip` содержит `results.json`, `manifest.json`, `scratch-cnn.pt`, `feature-extractor.pt`, `fine-tune.pt` и `misclassifications/{scratch,feature_extractor,fine_tune}/`. `results.json` сохраняет curves, время обучения, test accuracy, confusion matrix, per-class accuracy и метаданные ошибок.
 
 ## ONNX ResNet-50
 
